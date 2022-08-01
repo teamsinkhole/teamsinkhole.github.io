@@ -131,15 +131,15 @@
         <!-- Methods - Models -->
         <section class="projects-section bg-light" id="methods">
             <div class="container px-4 px-lg-5">
-                <!-- Model - RESTNET50-->
+                <!-- Model - ResNet-50-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="assets/img/raw/satellite_imagery.jpg" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">ResNet50</h4>
-                                    <p class="mb-0 text-white-50">2 types of machine learning models were used in the prediction of sinkhole risks. Convolutional neural network ResNet50 was first used to extract land use features by classifying 434K+ satellite images into 10 classes including: Annual Crop, Forest, Vegetation, Highway, Industrial, Pasture, Permanent Crop, Residential, River and Sea Lake.</p>
+                                    <h4 class="text-white">ResNet-50</h4>
+                                    <p class="mb-0 text-white-50">2 types of machine learning models were used in the prediction of sinkhole risks. Convolutional neural network ResNet-50 was first used to extract land use features by classifying 434K+ satellite images into 10 classes including: Annual Crop, Forest, Vegetation, Highway, Industrial, Pasture, Permanent Crop, Residential, River and Sea Lake.</p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-white">XGBoost</h4>
-                                    <p class="mb-0 text-white-50">The land use classificaiton resulted from ResNet50, along with data on weather, soil composition and historical sinkhole incidents was then fed into a second machine learning model, XGBoost, to generate a probability score between 0 and 1.</p>
+                                    <p class="mb-0 text-white-50">The land use classificaiton resulted from ResNet-50, along with data on weather, soil composition and historical sinkhole incidents was then fed into a second machine learning model, XGBoost, to generate a probability score between 0 and 1.</p>
                                     <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                           <img class="img-fluid" src="assets/img/raw/architecture.jpg" alt="architecture topology" style="width:900px;" />
                           <strong>Stage 1</strong><br> Input open-data sources including 10-meter resolution satelitte images from Sentinel-2, NOAA temperature and precipitation data, soil composition and Florida land subsidence incidents.
                           <br><br>
-                          <strong>Stage 2</strong><br> A ResNet50 model pre-trained with 27K+ EuroSAT images was used to extract land use feautres from 400K+ Florida state Sentinel-2 satellite images.
+                          <strong>Stage 2</strong><br> A ResNet-50 model pre-trained with 27K+ EuroSAT images was used to extract land use feautres from 400K+ Florida state Sentinel-2 satellite images.
                           <br><br>
                           <strong>Stage 3</strong><br> Using the centroid position of the 40K+ Sentinel-2 satellite image tiles (each sized at 640mX640m) that provide coverage for the entire Floridat state, the respective weather, soil composition and past sinkhole incident data was retrieved. This gave rise to a 34-feature consolidated training dataset used in Stage 4.
                           <br><br>
@@ -242,8 +242,16 @@
                 <!-- Vegalite viz -->
                 <p>
                   <br><br>
-                  Below is a partial listing of features within the focus data categories. These features demonstrate some of the predictive power of the risk intelligence probabilities. For these features, there is a noticeable distinction between the ends of their ranges that is also associated with higher or lower sinkhole prediction probability.
+                  The below visualizations showcase features that exhibit strong coorelations with the probability of sinkhole risks. These features include water storage amount in soil, percent of clay in the ground and sinkholes occurrences in close proximity (within a radial distance of at least 0.25 miles). These features contribute to the predictive power of our model in identifying areas that have a higher probability of encountering sinkholes.<br><br>
                   <br><br>
+                  In examining the relationship between water storage amount and probability of sinkhole occurrences, we can see the chart at the top shows that the lower the water storage amount, the higher the probability of sinkhole risks. See visualization at the top.<br><br>
+
+                  Similarly, the lower the proportion of clay in the ground, the higher the risk of sinkholes forming. See visualization second from the top. <br><br>
+
+                  As for sinkhole incident history, we observe that there is more likelihood of sinkholes happening in regions that previously have incidents reported in close proximity. See visualization third from the top.<br><br>
+
+                  We also observed water storage amount is proportionally correlated with the amount of organic matter in soil. The higher the water storage amount, the higher amount of organic matter in soil. See the scatter plot at the bottom.<br><br>
+
                 </p>
                 <div id="observablehq-waterstorage_line-18320738"></div>
                 <div id="observablehq-clay_line-18320738"></div>
@@ -305,7 +313,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">Precipitation & temperature</h4>
-                                    <p class="mb-0 text-white-50">Sinkhole formation could be triggered by drastic changes in groundwater level due to heavy rainfall followed by severe drought. The weather attributes accounted for 9.82% of the feature importance.</p>
+                                    <p class="mb-0 text-white-50">Sinkhole formation could be triggered by drastic changes in temperature and groundwater level. There have been several reports that point to severe drought followed by heavy rainfall triggering being a potential culprit. The weather attributes accounted for 9.82% of the feature importance.</p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
