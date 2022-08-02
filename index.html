@@ -57,9 +57,9 @@
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">Sinkholes are reportedly becoming more common with urbanization</h2>
                         <p class="text-white-50">
-                            When occurred in residential areas and places with high density, sinkholes could cause significant damages to buildings, infrastructure and lead to the loss of lives. The cost of damage for a typical sinkhole is estimated to be between $20K and $100K. The Florida state, also known as the capital of sinkhole, suffers from $200M to $400M of sinkhole damages every year.
+                            Snkholes could cause significant damages to buildings, infrastructure, and lead to the loss of lives in residential areas and places with high density. The cost of damage for a typical sinkhole is estimated to be between $20K and $100K. The Florida state, also known as the capital of sinkhole, suffers from $200M to $400M of sinkhole damages every year.
                             <br><br>
-                            Conventional sinkhole detection that relies on continuous ground surveying using a range of speicalized techniques such as ground penetrating radar (GPR) could be time consuming and costly. There is an opportunity to amalgamate non-geological open-data to complement the identification of areas with higher risks of sinkhole formations.
+                            Conventional sinkhole detection that relies on continuous ground surveying using a range of specialized techniques such as ground penetrating radar (GPR) could be time consuming and costly. There is an opportunity to amalgamate non-geological open-data to complement the identification of areas with higher risks of sinkhole formations.
                         </p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-black mb-4">Our mission is to raise awareness on hidden hazards in our surroundings and provide relevant risk intellingence to homebuyers and homeowners</h2>
+                        <h2 class="text-black mb-4">Our mission is to raise awareness on hidden hazards in our surroundings and provide relevant risk intelligence to homebuyers and homeowners</h2>
                         <p class="text-black-50">
                             By providing ZIP code level sinkhole risk intelligence, we equip users of our product with the ability to view sinkhole risk levels predicted by our machine learning model for neighborhoods within the state of Florida.
                         </p>
@@ -101,7 +101,7 @@
                                 👓 <strong>View risk ratings</strong><br>
                                 🗺️ <strong>Visualize data layers</strong><br><br>
 
-                              &#8592; Click on the image to the left to access the portal and explore neighborhoods in the Florida state with sinkhole risks.
+                              &#8592; Click on the image to access the portal and explore neighborhoods in the Florida state with sinkhole risks.
                             </p>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-black mb-4">Powered by open-data and data science techniques</h2>
                         <p class="text-black-50">
-                            By leveraiging open-data and data science techniques, our unique approach to sinkhole risk assessment combines data from sources including:<br><br>
+                            By leveraging open-data and data science techniques, our unique approach to sinkhole risk assessment combines data from sources including:<br><br>
                             <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel-2</a> satellite imagery (434K+ 640mX640m tiles),<br>
                             <a href="https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx">USDA</a> soil composition (9 soil attributes per satellite image tile),<br>
                             <a href="https://www.noaa.gov/weather">NOAA</a> weather data (290K+ daily precipitation and temperature records) and<br>
@@ -154,7 +154,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-white">XGBoost</h4>
-                                    <p class="mb-0 text-white-50">The land use classificaiton resulted from ResNet-50, along with data on weather, soil composition and historical sinkhole incidents was then fed into a second machine learning model, XGBoost, to generate a probability score between 0 and 1.</p>
+                                    <p class="mb-0 text-white-50">The land use classification resulted from ResNet-50, along with data on weather, soil composition and historical sinkhole incidents was then fed into a second machine learning model, XGBoost, to generate a probability score between 0 and 1.</p>
                                     <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
@@ -188,15 +188,15 @@
                         <h2 class="text-black mb-4">Our architecture topology features a 5-stage data pipeline</h2>
                         <p class="text-black-50">
                           <img class="img-fluid" src="assets/img/raw/architecture.jpg" alt="architecture topology" style="width:900px;" />
-                          <strong>Stage 1</strong><br> Input open-data sources including 10-meter resolution satelitte images from Sentinel-2, NOAA temperature and precipitation data, soil composition and Florida land subsidence incidents.
+                          <strong>Stage 1</strong><br> Input open-data sources including 10-meter resolution satellite images from Sentinel-2, NOAA temperature and precipitation data, soil composition and Florida land subsidence incidents.
                           <br><br>
-                          <strong>Stage 2</strong><br> A ResNet-50 model pre-trained with 27K+ EuroSAT images was used to extract land use feautres from 400K+ Florida state Sentinel-2 satellite images.
+                          <strong>Stage 2</strong><br> A ResNet-50 model pre-trained with 27K+ EuroSAT images was used to extract land use features from 400K+ Florida state Sentinel-2 satellite images.
                           <br><br>
-                          <strong>Stage 3</strong><br> Using the centroid position of the 40K+ Sentinel-2 satellite image tiles (each sized at 640mX640m) that provide coverage for the entire Floridat state, the respective weather, soil composition and past sinkhole incident data was retrieved. This gave rise to a 34-feature consolidated training dataset used in Stage 4.
+                          <strong>Stage 3</strong><br> Using the centroid position of the 40K+ Sentinel-2 satellite image tiles (each sized at 640mX640m) that provide coverage for the entire Florida state, the respective weather, soil composition and past sinkhole incident data was retrieved. This gave rise to a 34-feature consolidated training dataset used in Stage 4.
                           <br><br>
                           <strong>Stage 4</strong><br> Logistic regression, random forest and XGBoost for the prediction of sinkhole risks. XGBoost was found to be the highest performing based on F1-score and model fit.
                           <br><br>
-                          <strong>Stage 5</strong><br> Using the sinkhole risk probability scores (a numeric value between 0 and 1), a 5-level risk classification (Elevated/Moderate/Mild/Minor/Less Unlikely) was defined. The aggregated risk levels by ZIP code area was then used to fuel an interactive map made available on the sinkhole risk intelligence portal.
+                          <strong>Stage 5</strong><br> Using the sinkhole risk probability scores (a numeric value between 0 and 1), a 5-level risk classification (Elevated/Moderate/Mild/Minor/Less Unlikely) was defined. The aggregated risk levels by ZIP code area were then used to fuel an interactive map made available on the sinkhole risk intelligence portal.
                         </p>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-black mb-4">Model performance</h2>
                         <p class="text-black-50">
-                            XGBoost as an ensemble algorithm outperforms the standard decision tree and Random forest models by using boosting techniques to combine weak learners sequentially so that each new tree learns from the mistakes (errors) of the previous one.  With this model, we were able to achieve the highest F1-score while minimizing overfitting of the model.
+                            XGBoost as an ensemble algorithm outperforms the standard decision tree and random forest models by using boosting techniques to combine weak learners sequentially so that each new tree learns from the mistakes (errors) of the previous one.  With this model, we were able to achieve the highest F1-score while minimizing overfitting of the model.
                             <br><br>
 
                         </p>
@@ -230,7 +230,7 @@
                         <h2 class="text-black mb-4">Model explainability</h2>
                         <p class="text-black-50"> The top features from the most important to the least include:<br>
                           <strong>Historical sinkhole incidents</strong> - Within 2 miles of radial distance<br>
-                          <strong>Land use classificaiton</strong> - Permanent crop and highway<br>
+                          <strong>Land use classification</strong> - Permanent crop and highway<br>
                           <strong>Weather</strong> - Mean cumulative precipitation for the last 2 years and<br>
                           <strong>Soil composition</strong> - Percentage of sand, available water storage<br><br>
                           The feature importance results could be viewed below:
@@ -242,7 +242,7 @@
                 <!-- Vegalite viz -->
                 <p>
                   <br><br>
-                  The below visualizations showcase features that exhibit strong coorelations with the probability of sinkhole risks. These features include water storage amount in soil, percent of clay in the ground and sinkholes occurrences in close proximity (within a radial distance of at least 0.25 miles). These features contribute to the predictive power of our model in identifying areas that have a higher probability of encountering sinkholes.<br><br>
+                  The below visualizations showcase features that exhibit strong correlations with the probability of sinkhole risks. These features include water storage amount in soil, percent of clay in the ground and sinkholes occurrences in proximity (within a radial distance of at least 0.25 miles). These features contribute to the predictive power of our model in identifying areas that have a higher probability of encountering sinkholes.<br><br>
 
                   <strong>Water storage amount</strong><br>
                   In examining the relationship between water storage amount and probability of sinkhole occurrences, we can see the chart at the top shows that the lower the water storage amount, the higher the probability of sinkhole risks. See visualization at the top.<br><br>
@@ -251,7 +251,7 @@
                   Similarly, the lower the proportion of clay in the ground, the higher the risk of sinkholes forming. See second visualization from the top. <br><br>
 
                   <strong>Sinkhole history</strong><br>
-                  As for sinkhole incident history, we observe that there is more likelihood of sinkholes happening in regions that previously have incidents reported in close proximity. See thrid visualization from the top.<br><br>
+                  As for sinkhole incident history, we observe that there is more likelihood of sinkholes happening in regions that previously have incidents reported in close proximity. See third visualization from the top.<br><br>
 
                   <strong>Organic matter in soil</strong><br>
                   We also observed water storage amount is proportionally correlated with the amount of organic matter in soil. The higher the water storage amount, the higher amount of organic matter in soil. See the scatter plot at the bottom.<br><br>
